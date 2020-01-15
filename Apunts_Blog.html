@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+	<title>PRIMERA WEB</title>
+	<meta charset="utf-8"/>		
+	<style>	
+		.art1 {
+			background:lightsalmon;
+			font-weight:bold;
+		}
+		.art2 {
+			background:orange;
+			
+		}
+		.titol_a1 {
+			background:darkslategray;
+		}
+	</style><!--Exemple de style en bloc. Els claudators van així, dins tenim una zona per definir estils a les diferents etiquetes del document, com per exemple article, que afectara a totes les zones amb l'etiqueta article. Sempre va dins de HEAD-->
+<head/>
+<body style="background: skyblue"><!--Exemple de style en linea, a la mateixa linea d'actuació (l'estil background fa referencia al color del fons), tenen prioritat per sobre dels estils en bloc tot i que son compatibles-->
+
+<header>
+	<h1>My Blog</h1>
+</header>
+<nav>
+	<ul>
+		<li>Principal</li>
+		<li>Ajuda</li>
+		<li>Contacte</li>
+	</ul>
+</nav>
+<section>
+	<article class="art1"><!--Les clases serveixen per donar un nom diferent a l'etiqueta, aquest article en concret ara es diu "a1". D'aquesta manera puc atribuir aquest nou nom (a1) a totes les etiquetes que m'interessi per així, a la zona de style dona'ls-hi un estil a tots a l'hora (funciona amb el punt devant)-->
+		<h1 class="titol_a1">Títol del primer artícle</h1>
+		<time datetime="02-01-2020">Publicat el 2 d'octubre de 2020</time>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>	
+	<article class="art2">
+		<h1 class="titol_a1">Títol del segon artícle</h1>
+		<time datetime="03-01-2020">Publicat el 3 d'octubre de 2020</time>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+	<article class="art1">
+		<h1 class="titol_a1">Títol del tercer artícle</h1>
+		<time datetime="04-01-2020">Publicat el 4 d'octubre de 2020</time>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+	<article>
+		<h1 class="titol_a1">Títol del cuart artícle</h1>
+		<time datetime="05-01-2020">Publicat el 5 d'octubre de 2020</time>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</article>
+</section>
+<aside>
+	<blockquote>Archivo</blockquote>
+	<p>Acerca de...</p>
+</aside>
+<footer>
+	<p>Drets reservats</p>
+	<a href="http://www.google.com">Visita la web</a>
+</footer>
+
+<body/>
+</html>
