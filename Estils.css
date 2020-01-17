@@ -1,0 +1,34 @@
+/*Creació d'estils en fitxer extern:;
+Aquest fitxet servirà per crear els estils del document en .html que desitjem treballar, 
+en aquest cas, sera el .html "Apunts_Blog" perque es troben tots dos a la mateixa carpeta 
+i en aquest cas no hem asignat cap ruta.*/
+
+h1 {
+	font-size: 30px;
+	font-weight: bold;
+	font-family: sans-serif;
+}/*Aqui estem fent referencia a tots els títols "h1"*/
+.art2 {
+	font-family: sans-serif;
+	font-weight: bold;
+	color: goldenrod;
+	background: deepskyblue;
+	text-align: center;
+}/*En aquest cas hem utilitzat una classe creada del document .html*/
+header, section, aside, footer, nav, article {
+	border: 0.5px solid goldenrod;/*Els atributs es poden escriure en linea 0.5px solid ...*/
+	display: block;
+}/*Amb les comas seleccionem varis element alhora*/
+.art1 {
+	text-align: right;
+}
+div {
+	background: lightblue;
+	margin: auto;
+	width: 960px;
+}
+.div1 {
+	background: darkseagreen;
+	margin: auto;
+	width: 780px;
+}
