@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Adrià Tarrés Maupeyra</title>
+</head>
+<body>
+	<header>
+		<h1>CARTA DE PRESENTACIÓ</h1>
+	</header>
+	<nav>
+		<ul>
+			<li>Presentació</li>
+			<li>Curriculum Vitae</li>
+			<li>Portafolis</li>
+			<li>Contacte</li>
+		</ul>
+	</nav>
+	<section>
+		<article>
+			<h3>Titol carta</h3>
+				<p>Cos de la carta de presentació</p>
+		</article>
+	</section>
+	<aside>
+		
+	</aside>
+	<footer>
+		
+	</footer>
+</body>
+</html>
