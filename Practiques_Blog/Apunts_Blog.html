@@ -3,22 +3,10 @@
 <head> 
 	<title>PRIMERA WEB</title>
 	<meta charset="utf-8"/>		
-	<style>	
-		.art1 {
-			background:lightsalmon;
-			font-weight:bold;
-		}
-		.art2 {
-			background:orange;
-			
-		}
-		.titol_a1 {
-			background:darkslategray;
-		}
-	</style><!--Exemple de style en bloc. Els claudators van així, dins tenim una zona per definir estils a les diferents etiquetes del document, com per exemple article, que afectara a totes les zones amb l'etiqueta article. Sempre va dins de HEAD-->
+	<link rel="stylesheet" href="Estils.css"><!--Serveix per indicar al document (.html) quin arxiu extern de ".css" ha de fer servir. En aquest cas els dos documents (.html i .css) es troben a la mateixa carpeta.-->
 </head>
-<body style="background: skyblue"><!--Exemple de style en linea, a la mateixa linea d'actuació (l'estil background fa referencia al color del fons), tenen prioritat per sobre dels estils en bloc tot i que son compatibles-->
-
+<body>
+<div><!--Etiqueta per fer divisions. Només afectara des de l'archiu ".css", també se li pot donar una classe ja que es poden utilitzar tantes etiquetes "div" com desitjem (exemple al full de ".css"-->
 <header>
 	<h1>My Blog</h1>
 </header>
@@ -30,7 +18,7 @@
 	</ul>
 </nav>
 <section>
-	<article class="art1"><!--Les clases serveixen per donar un nom diferent a l'etiqueta, aquest article en concret ara es diu "a1". D'aquesta manera puc atribuir aquest nou nom (a1) a totes les etiquetes que m'interessi per així, a la zona de style dona'ls-hi un estil a tots a l'hora (funciona amb el punt devant)-->
+	<article>
 		<h1 class="titol_a1">Títol del primer artícle</h1>
 		<time datetime="02-01-2020">Publicat el 2 d'octubre de 2020</time>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -61,6 +49,7 @@
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</article>
 	<article>
+	<div class="div1">
 		<h1 class="titol_a1">Títol del cuart artícle</h1>
 		<time datetime="05-01-2020">Publicat el 5 d'octubre de 2020</time>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -69,6 +58,7 @@
 		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
 	</article>
 </section>
 <aside>
@@ -79,6 +69,6 @@
 	<p>Drets reservats</p>
 	<a href="http://www.google.com">Visita la web</a>
 </footer>
-
+</div>
 </body>
 </html>
