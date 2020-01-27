@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Formularis</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="">
+		<fieldset><!--Serveix per enmarcar tot el formulari, i crea un blog-->
+			<legend><b>Dades Personals del tipus <i>Text</i></b></legend><!--La "i" es simplement, cursiva i la "b", negreta / "legend" fa una especie de títol tallant el recuadre del formulari creat per l'etiqueta "fieldset".-->
+			<p>Nom: <input type="text" name="nom"></p><!--La filera d'adalt es el text que es veurà a la web // input es l'etiqueta que serveix per introduir els valors que definiran el camp on s'introdueixen les dades del formulari-->
+			<p>Cognoms: <input type="text" name="cognoms"></p><!--La <p> ha de tancar despres de l'etiqueta input-->
+			<p>Codi Postal: <input type="text" name="codi_postal" pattern="[0-9] {5}"></p><!--l'atribut "pattern" es per donar informació a la casella del formulari-->
+			<p>CP: <input type="text" name="cp" size="2" maxlength="5" required pattern="[0-9]"></p><!--"size"= tamany cuadre de text / "maxlength"=nombre màxim de valors que es poden introduir / "required"= obliga a omplir-->
+			<p>Provincia: <input type="text" readonly name="provincia" value="Girona"></p><!--"readonly"= recuarde del formulari que només és de lectura. Lectura donada per l'atribut "value" (en els type="text", en aquest cas, dins del recuarde de provincia veurem la paraula "Girona"-->
+			<p>E-mail: 
+				<input type="email" name="mail" required>
+				<input type="submit" value="OK"><!--"submit" serveix per crear un botó amb el nom del "value", el botó servirá per enviar la informació del "input" anterior, en aquest cas del mail (que te els seu propi type="email")-->
+			</p>
+		</fieldset>
+		<br><!--"br" = seria l'equivalent de fer un enter del teclat-->
+		<fieldset>
+			<legend><b>Comanda de tipus <i>Radio</i></b></legend>
+			<p>Model: <input type="text" name="model"></p>
+			<input type="radio" name="talla" value="S"> S<br><!--"value" (en els type="radio") fa referencia a el valor que ens arribara al correu sobre el que la gent tria, en aquest cas, tota la gent que cliqui sobre la casella S, fara que al correu m'arribi el missatge que hi ha dins del value-->
+			<input type="radio" name="talla" value="M"> M<br>
+			<input type="radio" name="talla" value="L" checked> L<br><!--"checked" = serveix per crear una selecció predeterminada (per exemple, la majoria de clients utilitzen la talla L)-->
+			<input type="radio" name="talla" value="XL"> XL<br><!--name = crea families, en aquest cas fa que només podem triar una de les 4 opcions si posesim dues amb un nom i les altres amb un altre nom, les del mateix nom es podrien seleccionar totes / "radio" = es un atribut que crea una llista de selecció amb rodones-->
+			<br>
+			Quantitat: <input type="text" name="quantitat" size="3" value="1">
+			<p>Tria el color: <input type="color"></p><!--Serveix per donar a escollir qualsevol color existent-->
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><b>Pregunta en <i>Lista desplegable</i></b></legend>
+			<p>Quin navegador utilitzes?</p>
+			<select>
+				<option value="1">Internet Explorer</option>
+				<option value="2">Firefox</option>
+				<option value="3">Chrome</option>
+				<option value="0" selected>--</option><!--"selected" = serveix per crear una resposta per defecte, sino, sortirà la primera-->
+			</select><!--Creació d'una llista desplegable amb les opcions donades per l'etiqueta "option"-->
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><b>Selecció del tipus <i>Checkbox</i></b></legend>
+			<p>Serveis:
+				<input type="checkbox" name="n1" value="erp"> ERP
+				<input type="checkbox" name="n1" value="crm"> CRM
+				<input type="checkbox" name="n1" value="formació"> FORMACIÓ <!-- "checkbox" = és multiselecció per definició. Es crean les families, com abans, segons el name.-->
+			</p>
+			Observacions: <br>
+			<textarea rows="4" cols="30"></textarea><!--"textarea"= crea un cuadre de text on les lines venen donades per l'atribut "rows" i els caracters per l'atribut "cols", són els atributs que veurem, pero es pot escriure més.-->
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend><b>Selecció d'empresa de tipus <i>Datalist</i></b></legend>
+			<p>Tipus d'empresa:
+				<input type="text" list="tipusempresa">
+				<datalist id="tipusempresa">
+					<option value="Societat anónima (SA)"></option>
+					<option value="Societat limitada (SL)"></option>
+					<option value="Societiat civil (SC)"></option>
+				</datalist><!--Creació d'un quadre de text amb les seves opcions pre-determinades, per aixo hi posem l'atribut "list" que ha de ser igual al "id" que creem desprès en forma de "option", per tant, els "datalist" sempre van lligats a un "id". Amés es una llista inteligent, posant una lletra al cuadre de text, et llista totes les opcions que comensen amb aquella lletra-->
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>
