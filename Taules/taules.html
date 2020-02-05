@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Taules</title>
+    <style>
+        table {
+            border: 5px solid black;
+            width: 500px; /*Amplada*/
+            height: 500px; /*Alçada*/
+            border-collapse: collapse;/*Uneix les lineas. Sense aquest estil tindriem bordes
+            separats per cada cel·la i un borde de la taula*/
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;/*Només modifica la ".taula0" ja que la ".taula1" té uns estils
+            de línia que son prioritaris)*/
+        }
+        table td, th {
+            border: 2px solid red;
+        }
+        .taula0 td {
+            vertical-align: top;/*Alieniació vertical dels contiguts de les cel·les (adal, 
+            al mitg o abaix*/
+            width: 33%;
+            padding: 15px;
+        }
+        .color {
+            background-color: darkolivegreen;
+        }
+        /*Taula estructurada*/
+        thead {
+            background-color: aquamarine;
+            font-size: 52px;
+        }
+        tfoot {
+            font-size: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!--Creació de taules rapidament: escriure dins letiqueta "table" tr*x>td*x on "x" son
+    el nombre de files i columnes desitjades-->
+    <table><!--Les taules es generen per files "tr" on, a dins, hi posem el nombre de columnes,
+    es genera per cel·les-->
+    <caption>Titol de la Taula</caption><!--Serveix per incorporar un titol fora de la taula-->
+        <tr><!--Representa les files-->
+            <th>Títol 1</th><!--Representa els titols, fa una negreta per defecte-->
+            <th>Títol 2</th>
+            <th>Títol 3</th>
+        </tr>
+        <tr>
+            <td>1</td><!--Representa les dades de la taula-->
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table> 
+    <br><br>
+    <table><!--Taula amb alineació horitzontal-->
+        <tr>
+            <td style="text-align: left;">Producte 1</td>
+            <td style="text-align: center;">En Stock</td>
+            <td style="text-align: right;">3,43 €</td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Producte 2</td>
+            <td style="text-align: center;">Pendent</td>
+            <td style="text-align: right;">6,72 €</td>
+        </tr>
+    </table>
+    <br><br>
+    <table class="taula0"><!--Taula amb alineació vertical-->
+        <tr>
+            <td style="width: 10%;">Cas 1</td>
+            <td>xxxxxxxxxx xxxxxx xxxxxxxxx xxxxxxxx</td>
+        </tr>
+        <tr>
+            <td class="color" style="width: 10%;">Cas 2</td>
+            <td>xxxxxx xxxxxxx xxxx x</td>
+        </tr>
+        <tr>
+            <td style="width: 10%;">Cas 3</td>
+            <td>xxxxxx xxxxxxx xxxx xxx xxxxxx xxxxxx xxxxxx xxxxxx xxxxxxxxx xxx x xxxxx xx
+                xxxxxx xxxxxxx xxxxxxxxxx x  xxxxx xxxx x xxxxxxxxxxx xxxxxxxx xxxxxx  xxxxxxx
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table><!--Taula amb la unio de cel·les a nivell de fila-->
+        <tr>
+            <td colspan="3" style="text-align: center;">Títol de la taula</td><!--colspan
+            serveix per unir les cel·les de foram hotizontal-->
+        </tr>
+        <tr>
+            <td>1</td><td>2</td><td>3</td>
+        </tr>
+        <tr>
+            <td>4</td><td>5</td><td>6</td>
+        </tr>
+    </table>
+    <br><br>
+    <table><!--Taula amb la unio de cel·les a nivell de columna-->
+        <tr>
+            <td rowspan="3" style="vertical-align: middle;">Títol de la taula</td><!--
+                rowspan serveix per fusionar cel·les a nivell columna
+            -->
+            <td>1</td><td>2</td><td>3</td>
+        </tr>
+        <tr>
+            <td>4</td><td>5</td><td>6</td>
+        </tr>
+        <tr>
+            <td>7</td><td>8</td><td>9</td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <colgroup span="1" style="background-color: darkolivegreen;"></colgroup>
+        <colgroup span="2" style="background-color: darkseagreen;"></colgroup><!--El 
+        colgroup serveix per agrupar les columnes-->
+        <tr>
+            <td>
+                <img src="imatge_escarbat.jpg" title="primera" width="70" height="70"><!--Imatge
+                dins d'una taula-->
+            </td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <br><br>
+    <table>
+        <caption>Taula estructurada (SEO)</caption>
+        <thead>
+            <tr>
+                <td colspan="2" style="text-align: center;">Fusió de caselles</td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="2" style="text-align: center;">W3C Working Draft 24 Juny 2010</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td><i>colspan</i></td>
+                <td>Per fusionar columnes</td>
+            </tr>
+            <tr>
+                <td><i>rowspan</i></td>
+                <td>Per fusionar files</td>
+            </tr>
+        </tbody>
+    </table><!--Les etiquetes: "thead", "tfoot" i "tbody". Serveixen per donar informació
+    al navegador de cares al SEO. !!!OJO!!! En aquest ordre.-->
+</body>
+</html>
